@@ -1,0 +1,170 @@
+html,body,.container
+{
+    height:100%;
+}
+.container
+{
+    display:table;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; /*set left/right padding according to needs*/
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-2
+{
+    background: white;
+    height: 50px;
+
+}
+header
+{
+    background: black;
+    height: 50px;
+}
+
+.row
+{
+    height: 100%;
+    display: table-row;
+}
+.col-md-2.no-float, .col-md-10.no-float {
+    padding: 0;
+    margin:0;
+}
+.col-md-2
+{
+    background: #ffffff;
+}
+.col-md-10
+{
+    background: #EDEDED;
+
+}
+
+.popMenu {
+    background:white;
+    z-index:1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    position: fixed;
+    top: 110px;
+    left: 240px;
+    width: 220px;
+    z-index:10!important;
+
+}
+.popMenuModal {
+    background:white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    z-index:10 !important;
+}
+.fixedHeight {
+    height: 60vh;
+}
+.popMenu h3 {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    overflow: scroll;
+}
+.clipArtsMenu {
+    width: 45vw;
+    padding: 10px;
+    overflow: scroll;
+}
+.bb {
+    border: 1px solid black;
+    margin: 5px;
+
+}
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+        width:20%;
+        display: inline !important;
+    }
+    .actions .btn{
+        width:36%;
+        margin:1.5em 0;
+    }
+
+    .actions .btn-info{
+        float:left;
+    }
+    .actions .btn-danger{
+        float:right;
+    }
+
+    table#cart thead { display: none; }
+    table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+    table#cart tbody tr td:first-child { background: #333; color: #fff; }
+    table#cart tbody td:before {
+        content: attr(data-th); font-weight: bold;
+        display: inline-block; width: 8rem;
+    }
+
+
+
+    table#cart tfoot td{display:block; }
+    table#cart tfoot td .btn{display:block;}
+
+}
+.modal.modal-wide .modal-dialog {
+    width: 90%;
+}
+.modal-wide .modal-body {
+    overflow-y: auto;
+}
+footer .navbar-collapse.in {
+    bottom: 70px;
+    position: absolute;
+    background-color:#333;
+    width:100%;
+}
+.menuColors ul li{
+    color: black;
+}
+.menuBottom:hover {
+    background-color: gray;
+}
+.imageIcon {
+    margin:10px;
+    width:25px;
+    height:25px;
+}
+.lineHeader {
+    border-left: solid gray 1px;
+    float: left;
+    height:100%;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:7px;
+    max-width: 160px;
+}
+.header-x-icon {
+    margin-right:10px;
+}
+.header-x-shareit {
+    maring-left:10px;
+}
+.menuLeft {
+    list-style: none;
+    padding:0;
+}
+.menuLeft li {
+    margin-top:20px;
+    margin-left:15px;
+}

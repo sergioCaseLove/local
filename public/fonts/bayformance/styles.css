@@ -1,0 +1,16 @@
+
+@font-face {
+  font-family: 'Bayformance';
+  src: url('Bayformance.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bayformance';
+  src: url('Bayformance.ttf')  format('truetype'), url('Bayformance.svg#Bayformance') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

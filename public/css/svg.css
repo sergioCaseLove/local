@@ -1,0 +1,228 @@
+/* Copyright � 2013 Sticker App AB */
+
+.svgContainer {
+	background-color: #e8e8e8; 
+}
+
+.svgSheet { 
+	fill: none;
+	stroke: none;
+}
+
+.svgSheet.sheet { 
+  fill: white ;
+}
+.svgSheet.skin {}
+.svgSheet.case {}
+.svgSheet.single {}
+
+.svgSheetPath{
+	fill: none;
+	stroke: none;
+	stroke-width: 2;
+	
+}
+
+.svgSheetPath.sheet {
+  fill: none; 
+	stroke: rgb(0, 0, 0);
+  stroke-width: 0.5;
+}
+.svgSheetPath.skin {}
+.svgSheetPath.case {}
+.svgSheetPath.single {}
+
+.svgPartPath { 
+  fill: none;
+  stroke: #FF00FF;
+  stroke-width: 1;
+}
+
+
+.svgPartBleedPath { 
+  fill: none;
+  stroke: #0096FF;
+  stroke-width: 1;
+}
+/*
+body.case .svgPartPath,
+body.skin .svgPartPath {
+  fill: none;
+	stroke: rgb(0, 150, 255);
+}
+body.case .svgPartBleedPath,
+body.skin .svgPartBleedPath {
+  fill: none;
+	stroke: rgb(255,0,255);
+}
+*/
+
+.svgShadowSheet {
+	display : none;
+  fill : none;
+  stroke : black;
+  stroke-opacity : 0.5;
+  stroke-width : 1;
+}
+
+.svgShadowPath {
+	fill : none;
+	stroke : black;
+	stroke-opacity : 0.5;
+	stroke-width : 0;
+}
+
+.svgShadowOverlay {
+  fill : #e8e8e8;
+  stroke : none;
+  fill-opacity : 0.5;
+}
+
+.svgCollageShadowOverlay {
+  fill : black;
+  stroke : none;
+  fill-opacity : 0.4;
+}
+
+.svgHover {
+	stroke-width : 1px;
+	fill : none;
+  stroke : #ccc;
+  cursor: pointer;
+}
+.svgHover.move {
+  cursor: move;
+}
+
+.svgSelect {
+	fill : none;
+  stroke : black;
+  stroke-width : 1;
+  cursor : move;
+}
+
+.svgSelectCorner {
+  fill : white;
+  stroke : green;
+  stroke-width : 2;
+}
+
+.svgSelectNW {
+  cursor : nw-resize;
+}
+
+.svgSelectNE {
+  cursor : ne-resize;
+}
+
+.svgSelectSE {
+  cursor : se-resize;
+}
+
+.svgSelectSW {
+  cursor : sw-resize;
+}
+
+.svgSelectN {
+  cursor : n-resize;
+}
+
+.svgSelectE {
+  cursor : e-resize;
+}
+
+.svgSelectS {
+  cursor : s-resize;
+}
+
+.svgSelectW {
+  cursor : w-resize;
+}
+
+
+.svgSelectRotate {
+/*  fill : none;*/
+/*  stroke : none; */
+  cursor : e-resize;
+}
+
+.svgSelectRotateLine {
+  stroke : #000;
+  stroke-width : 1;
+}
+
+.svgSelectIcon {
+  cursor : pointer;
+}
+
+
+.svgPartSizeText {
+  fill: #000;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+.svgSheetSizeText {
+  fill: #000;
+  font-size: 20px;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+.svgIcon{
+  stroke: none;
+  stroke-width: 2px;
+  fill: #363636;
+}
+.svgIcon:hover{
+  fill: #000;
+}
+
+.svgIconRound{
+	padding: 2px;
+}
+
+.svgIconRect{
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.svgIconMenu{
+  stroke: none;
+  stroke-width: 2px;
+  fill: #363636;
+	padding: 8px;
+  border-radius: 5px;  
+	margin-left: 40px;
+	margin-top: 30px;
+}
+.svgIconMenu:hover{
+  fill: #000;
+}
+
+.svgIconMenuTouch{
+  stroke: none;
+  fill: #363636;
+  padding: 10px;
+  border-radius: 5px;  
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.svgCollagePath {
+  fill : none;
+  stroke : grey;
+  stroke-width: 0.5px;
+}
+
+.svgCollagePath.drag {
+  fill: none;
+  stroke : black;
+  stroke-width: 1px;
+}
+
+.svgCollagePath.drop {
+  fill: none;
+  stroke : black;
+  stroke-width: 1px;
+}

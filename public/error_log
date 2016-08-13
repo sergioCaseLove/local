@@ -1,0 +1,134 @@
+[23-Apr-2016 18:24:53 UTC] PHP Fatal error:  Call to a member function move() on null in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/ArchivosController.php on line 41
+[12-May-2016 01:08:13 UTC] PHP Fatal error:  Call to a member function move() on null in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/ArchivosController.php on line 41
+[20-Jun-2016 17:37:34 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/1a4e66c17cebd306994f5824c7cf357f on line 33
+[20-Jun-2016 17:37:40 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/1a4e66c17cebd306994f5824c7cf357f on line 33
+[20-Jun-2016 17:40:57 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/1a4e66c17cebd306994f5824c7cf357f on line 47
+[20-Jun-2016 17:40:59 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/1a4e66c17cebd306994f5824c7cf357f on line 47
+[20-Jun-2016 20:09:04 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/4fef905680dbaf2eb8711cd0dd590328 on line 14
+[20-Jun-2016 20:09:06 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/4fef905680dbaf2eb8711cd0dd590328 on line 14
+[20-Jun-2016 20:22:53 UTC] PHP Parse error:  syntax error, unexpected 'switch' (T_SWITCH) in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/4fef905680dbaf2eb8711cd0dd590328 on line 66
+[20-Jun-2016 21:00:32 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/lovecx7i/public_html/caseloveapp.com/app/Http/routes.php on line 165
+[20-Jun-2016 21:11:46 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:11:46 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:11:49 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:11:49 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:12:04 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:12:04 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:12:11 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 44
+[20-Jun-2016 21:12:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 44
+[20-Jun-2016 21:12:19 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:12:19 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:12:36 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:12:36 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:14:19 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:14:19 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:14:25 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:14:25 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:14:57 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:14:57 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:15:06 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:15:06 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:15:09 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:15:09 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 29
+[20-Jun-2016 21:15:40 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 56
+[20-Jun-2016 21:15:40 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 56
+[20-Jun-2016 21:15:59 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 56
+[20-Jun-2016 21:15:59 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 56
+[20-Jun-2016 21:16:16 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 61
+[20-Jun-2016 21:16:16 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 61
+[20-Jun-2016 21:16:20 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 61
+[20-Jun-2016 21:16:20 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 61
+[20-Jun-2016 21:16:25 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 34
+[20-Jun-2016 21:16:25 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 34
+[20-Jun-2016 21:17:13 Etc/GMT] PHP Notice:  Undefined variable: TipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 26
+[20-Jun-2016 21:17:13 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:17:13 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:17:20 Etc/GMT] PHP Notice:  Undefined variable: TipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 26
+[20-Jun-2016 21:17:20 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:17:20 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:19:16 Etc/GMT] PHP Notice:  Undefined variable: TipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 26
+[20-Jun-2016 21:19:16 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:19:16 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:19:38 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:19:38 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 36
+[20-Jun-2016 21:20:17 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 31
+[20-Jun-2016 21:20:17 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 31
+[20-Jun-2016 21:20:34 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 31
+[20-Jun-2016 21:20:34 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 31
+[20-Jun-2016 21:21:04 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 30
+[20-Jun-2016 21:21:04 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 30
+[20-Jun-2016 21:21:04 Etc/GMT] PHP Notice:  Undefined variable: marcasSlim in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 35
+[20-Jun-2016 21:21:04 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 35
+[20-Jun-2016 21:22:05 Etc/GMT] PHP Parse error:  syntax error, unexpected 'global' (T_GLOBAL) in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 32
+[20-Jun-2016 21:22:08 Etc/GMT] PHP Parse error:  syntax error, unexpected 'global' (T_GLOBAL) in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 32
+[20-Jun-2016 21:22:10 Etc/GMT] PHP Parse error:  syntax error, unexpected 'global' (T_GLOBAL) in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 32
+[20-Jun-2016 21:22:11 Etc/GMT] PHP Parse error:  syntax error, unexpected 'global' (T_GLOBAL) in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 32
+[20-Jun-2016 21:23:44 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 64
+[20-Jun-2016 21:23:44 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 64
+[20-Jun-2016 21:23:49 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 65
+[20-Jun-2016 21:23:49 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 65
+[20-Jun-2016 21:23:51 Etc/GMT] PHP Notice:  Undefined variable: marcasRubber in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 65
+[20-Jun-2016 21:23:51 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 65
+[21-Jun-2016 14:27:03 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 94
+[21-Jun-2016 14:27:03 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 94
+[21-Jun-2016 14:27:30 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 94
+[21-Jun-2016 14:27:30 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 94
+[21-Jun-2016 14:27:55 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 94
+[21-Jun-2016 14:27:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 94
+[21-Jun-2016 14:29:44 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 100
+[21-Jun-2016 14:29:44 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 100
+[21-Jun-2016 14:29:52 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 100
+[21-Jun-2016 14:29:52 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 100
+[21-Jun-2016 14:42:26 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 100
+[21-Jun-2016 14:42:26 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 100
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:50:47 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:11 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Notice:  Undefined variable: CatTipoCase in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[24-Jun-2016 16:51:55 Etc/GMT] PHP Warning:  Invalid argument supplied for foreach() in /home/lovecx7i/public_html/caseloveapp.com/public/informacionPedidos.blade.php on line 59
+[08-Jul-2016 00:00:04 UTC] PHP Fatal error:  Call to a member function move() on null in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/ArchivosController.php on line 41
+[22-Jul-2016 21:25:40 UTC] PHP Fatal error:  Call to a member function move() on null in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/ArchivosController.php on line 41
+[09-Aug-2016 09:58:22 America/Monterrey] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/PedidoController.php on line 20
+[09-Aug-2016 10:19:43 America/Monterrey] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/lovecx7i/public_html/caseloveapp.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php on line 3234
+[09-Aug-2016 11:55:01 America/Monterrey] PHP Fatal error:  Class 'App\Http\Controllers\Request' not found in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/PedidoController.php on line 25
+[10-Aug-2016 09:32:29 America/Monterrey] PHP Fatal error:  Trait 'App\Http\Controllers\ValidatesRequests' not found in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/PedidoController.php on line 10
+[10-Aug-2016 09:32:29 America/Monterrey] PHP Fatal error:  Trait 'App\Http\Controllers\ValidatesRequests' not found in /home/lovecx7i/public_html/caseloveapp.com/app/Http/Controllers/PedidoController.php on line 10
+[10-Aug-2016 10:09:14 America/Monterrey] PHP Parse error:  syntax error, unexpected end of file in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/63bea69d736c8f1534b22bbf716d5cd6 on line 36
+[10-Aug-2016 10:09:28 America/Monterrey] PHP Parse error:  syntax error, unexpected end of file in /home/lovecx7i/public_html/caseloveapp.com/storage/framework/views/63bea69d736c8f1534b22bbf716d5cd6 on line 36
