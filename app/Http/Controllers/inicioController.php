@@ -73,9 +73,21 @@ class inicioController extends Controller
 	public function guardarCampo(Request $request)
 	{
 		$tipos = $request->input('tipos');
-		$clave = $request->input('clave');
+		$cats = $request->input('cats');
+		$catArray = array();
+		foreach($cats as $cat)
+		{
+			$all_cats = \App\Catalago::where('clave_catalago', $cat)->get();
+			$cont = 0;
+			foreach ($all_cats as $value) {
+				$catArray[$cat][$cont] = $value;
+				$cont++;
+			}
+		}
+
+		//$clave = $request->input('clave');
+		$claves = $request->input('baia');
 		$description = $request->input('description');
-		$codigo_barras = $request->input('codigo_barras');
 		$unidad = $request->input('unidad');
 		$marca = $request->input('marca');
 		$modelo = $request->input('modelo');
@@ -91,6 +103,7 @@ class inicioController extends Controller
 		$precio4 = $request->input('precio4');
 		$precio5 = $request->input('precio5');
 		$ultimo_costo = $request->input('ultimo_costo');
+
 		$disenioResult = \App\Disenio::All();
 /*
 							$rowArray = array(
@@ -111,166 +124,255 @@ class inicioController extends Controller
 									$precio4,
 									$precio5
 							);*/
-		foreach($tipos as $tipo)
+							//return $catArray['A6'][0]['consecutivo'];
+		foreach($claves as $clave)
 		{
-			$producto = new \App\ArticulosSait;
-			foreach($disenioResult as $row)
+
+			foreach($tipos as $tipo)
 			{
-				$claveDisenio = $row->clave;
 				switch($tipo)
 				{
 					case 'A':
-						$producto->clave = $clave . "A" . $claveDisenio;
-						$producto->description = $description . " Uso Rudo";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "A";
-						$producto->familia = "Uso Rudo";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'A-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Uso Rudo";
+								$producto->codigo_barras = 'A-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo[0]->descripcion;
+								$producto->clave_familia = "A";
+								$producto->familia = "Uso Rudo";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+							}
+						}
 						break;
 					case 'C':
-						$producto->clave = 'C-' . $clave . $claveDisenio;
-						$producto->description = $description . " Cartera";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "C";
-						$producto->familia = "Cartera";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'C-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description =  $modelo[0]->descripcion . " Cartera";
+								$producto->codigo_barras = 'C-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "C";
+								$producto->familia = "Cartera";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'DP':
-						$producto->clave = 'DP-' . $clave . $claveDisenio;
-						$producto->description = $description . " Dual Pro";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "DP";
-						$producto->familia = "Dual Pro";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'DP-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Dual Pro";
+								$producto->codigo_barras = 'DP-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "DP";
+								$producto->familia = "Dual Pro";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'HG':
-						$producto->clave = "HG-" . $clave . $claveDisenio;
-						$producto->description = $description . " Glitter";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "HG";
-						$producto->familia = "Glitter";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'HG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Glitter";
+								$producto->codigo_barras = 'HG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "HG";
+								$producto->familia = "Glitter";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'HY':
-						$producto->clave = "HY-" . $clave . $claveDisenio;
-						$producto->description = $description . " Hibrido";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "HY";
-						$producto->familia = "Hibrido";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'HY-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Hibrido";
+								$producto->codigo_barras = 'HY-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "HY";
+								$producto->familia = "Hibrido";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'RC':
-						$producto->clave = "RC-" . $clave . $claveDisenio;
-						$producto->description = $description . " Rubber Case";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "RC";
-						$producto->familia = "Rubber Case";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'RC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Rubber Case";
+								$producto->codigo_barras = 'RC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "RC";
+								$producto->familia = "Rubber Case";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'RG':
-						$producto->clave = "RG-" . $clave . $claveDisenio;
-						$producto->description = $description . " Rubber Gel";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "RG";
-						$producto->familia = "Rubber Gel";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'RG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Rubber Gel";
+								$producto->codigo_barras = 'RG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "RG";
+								$producto->familia = "Rubber Gel";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'SC':
-						$producto->clave = $clave . $claveDisenio;
-						$producto->description = $description . " Slim Case";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "SC";
-						$producto->familia = "Slim Case";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $claveDisenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'SC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Slim Case";
+								$producto->codigo_barras = 'SC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "SC";
+								$producto->familia = "Slim Case";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 					case 'TD':
-						$producto->clave = "TD-" . $clave . $claveDisenio;
-						$producto->description = $description . " Jelly Case";
-						$producto->codigo_barras = $codigo_barras;
-						$producto->unidad = $unidad;
-						$producto->marca = $marca;
-						$producto->modelo = $modelo;
-						$producto->clave_familia = "TD";
-						$producto->familia = "Jelly Case";
-						$producto->impuesto1 = $impuesto1;
-						$producto->divisa = $divisa;
-						$producto->precio = $precio;
-						$producto->precio2 = $precio2;
-						$producto->ultimo_costo = $ultimo_costo;
-						$producto->clave_disenio = $clave_disenio;
-						$producto->save();
+						foreach($catArray as $key => $cat)
+						{
+							foreach($cat as $ca)
+							{
+								$modelo = \App\Modelo::where('clave', $clave)->get();
+								$producto = new \App\ArticulosSait;
+
+								$producto->clave = 'TD-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->description = $modelo[0]->descripcion . " Jelly Case";
+								$producto->codigo_barras = 'TD-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								$producto->unidad = $unidad;
+								$producto->marca = $marca;
+								$producto->modelo = $modelo;
+								$producto->clave_familia = "TD";
+								$producto->familia = "Jelly Case";
+								$producto->impuesto1 = $impuesto1;
+								$producto->divisa = $divisa;
+								$producto->precio = $precio;
+								$producto->precio2 = $precio2;
+								$producto->ultimo_costo = $ultimo_costo;
+								$producto->clave_disenio = $key;
+								$producto->save();
+
+							}
+						}
 						break;
 				}
 
@@ -282,7 +384,6 @@ class inicioController extends Controller
 		//esta aprte descarga el archivo con los datos, solo falta jalarlos de la base de datos para despues guardarlos
 		//preguntar sobre los diferentes precios para diferentes tipos de articulos
 		$result = \App\ArticulosSait::where('exportado', 0)->get();
-
 		if(!$result->isEmpty())
 		{
 			\Excel::create('export_sait', function($excel) use ($result) {
@@ -294,6 +395,7 @@ class inicioController extends Controller
 
 					$rowArray = array(
 							"Clave de Articulo", 
+							"Codigo de Barras", 
 							"Descripcion", 
 							"Clave de Familia", 
 							"Familia", 
@@ -315,10 +417,11 @@ class inicioController extends Controller
 
 					foreach($result as $row)
 					{
-						$diseño = \App\Disenio::where('clave', $row->clave_disenio)->get();
+
 						$rowArray = array(
 							$row->clave,
-							$row->description . " " . $diseño[0]->nombre,
+							$row->clave,
+							$row->description,
 							$row->clave_familia,
 							$row->familia,
 							$row->impuesto1,
@@ -361,7 +464,7 @@ foreach($tipos as $tipo)
 						case 'A':
 							$rowArray = array(
 									$clave . "A", 
-									$description, 
+									$modelo[0]->descripcion, 
 									"A", 
 									"Rudo", 
 									$impuesto1,

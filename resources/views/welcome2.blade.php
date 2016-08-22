@@ -54,7 +54,7 @@
             $('input[type="checkbox"]').change(function(){
                 //aqui se sacan los values de los checkbox
             });
-            alert($(this).attr('name'));
+            //alert($(this).attr('name'));
             //alert($(this).val());
         });
         $('#tipos :checked').each(function(){
@@ -63,13 +63,18 @@
         $('input[name=tipos]').change(function(){
             if($(this).is('click'))
             {
-                alert('click');
+                //alert('click');
             }
         });
         $('input[name=tipos] :checked').each(function (){
             //console.log($('#tipos').val());
             console.log($(this).val());
             //$("#codigo_barras_p").html($('#tipos').val());
+        });
+        $("#enviar").click(function(){
+            $('#baia option').each(function(){
+                $(this).prop('selected', true);
+            });
         });
         //$.each()
     });
@@ -156,7 +161,7 @@
                             <label> <font color="gray" face="verdana">Descripcion</font></label>
                         </td>
                         <td>
-                            <select style="width:200px;" size="10" multiple="multiple" id="seleccion">
+                            <select style="width:200px;" size="10" multiple="multiple" id="seleccion" name="seleccion[]">
                                 @foreach($modelos as $modelo)
                                     <option value="{{$modelo->clave}}">{{$modelo->descripcion}}</option>
                                 @endforeach
@@ -167,7 +172,7 @@
                             <input type="button" id="eliminar" value="<<" />
                         </td>
                         <td>
-                            <select style="width:200px;" size="10" multiple="multiple" id="baia">
+                            <select style="width:200px;" size="10" multiple="multiple" id="baia" name="baia[]">
                             </select>
                         </td>
                     <!--
@@ -459,7 +464,7 @@
                     </tr>-->
                 </table>
                 <div id="priceArea"></div>
-                    <input type="submit" name="" value="guardar">
+                    <input type="submit" name="" value="guardar" id="enviar">
                 </form>
             </div>
         </div>
