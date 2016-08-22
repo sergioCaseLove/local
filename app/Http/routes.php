@@ -10,5 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', 'inicioController@inicio');
+Route::get('/', 'inicioController@temp');
+Route::get('opcion2', 'inicioController@opcion2');
+Route::get('modelos', 'inicioController@getArtic');
 Route::get('verPedido', 'inicioController@verPedido');
+Route::get('descarga', 'inicioController@descargaArchivo');
+Route::get('guardar', 'inicioController@guardarCampo');

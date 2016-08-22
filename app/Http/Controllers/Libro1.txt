@@ -1,0 +1,162 @@
+Clave	Descripcion
+IP4	Case iPhone 4/4s  Slim
+IP5	Case iPhone 5/5s Slim
+IP5C	Case iPhone 5c Slim
+IP6	Case iPhone 6 Slim
+IP6P	Case iPhone 6 Plus Slim
+IPA	Case iPad Air Slim
+IPM	Case iPad Mini Slim
+IPT	Case iPod Touch 5
+H626	Case HTC 626 Slim
+M8	Case HTC M8 Slim
+G3	Case LG G3 Slim
+G3S	Case LG G3 Stylus
+G4	Case LG G4 Slim
+G4S	Case LG G4 Stylus Slim
+G5	Lg G5
+LGZ	LG Zero
+NX5	Case LG Nexus 5 Slim
+PLT	Case LG G Pro Lite Slim
+ME2	Case Motorola E2
+MG	Case Moto G Slim
+MG2	Case Moto G 2 Slim
+MG3	Case Moto G3 Slim
+MX2	Case Moto X 2 Slim
+MXP	Case Moto X Play Slim
+A3	Case Galaxy A3 Slim
+A5	Case Galaxy A5 Slim
+A5 2016	Samsung Galaxy A5 2016
+A7	Case Galaxy A7 Slim
+A7 2016	Samsung Galaxy A7 2016
+AP	Case Galaxy Alpha Slim
+C2	Case Galaxy Core II Slim
+E5	Case Galaxy E5 Slim
+E7	Case Galaxy E7 Slim
+GMX	Case Samsung Grand Max G7200
+GP	Case Galaxy Grand Prime Slim
+J5	Case Samsung Galaxy J5 Slim
+J7	Case Samsung Galaxy J7 Slim
+J5 2016	Case Samsung Galaxy J5 2016 Slim
+J7 2016	Case Samsung Galaxy J7 2016 Slim
+N2	Case Galaxy Note 2 Slim
+N3	Case Galaxy Note 3 Slim
+N4	Case Galaxy Note 4 Slim
+N5	Case Galaxy Note 5 Slim
+S3	Case Galaxy S3 Slim
+S3M	Case Galaxy S3 mini Slim
+S4	Case Galaxy S4 Slim
+S4M	Case Galaxy S4 mini Slim
+S5	Case Galaxy S5 Slim
+S5M	Case Galaxy S5 mini Slim
+S6	Case Galaxy S6 Slim
+S6A	Case Samsung S6 Active Slim
+S6E	Case Galaxy S6 Edge Slim
+S6EP	Case Galaxy S6 Edge Plus Slim
+S7	Samsung Galaxy S7
+S7E	Samsung Galaxy S7 Edge
+C5	Case Sony C5 Slim
+M2	Case Sony M2 Slim
+M4A	Case Sony M4 Aqua Slim
+M5	Sony M5
+SE4	Case Sony E4
+T2	Sony T2
+Z1	Case Sony Z1 Slim
+Z2	Case Sony Z2 Slim
+Z3	Case Sony Z3 Slim
+Z5	Sony Z5
+L2P	Case ZTE L2 Plus Slim
+TD-IP5	Jelly Case iPhone 5
+TD-IP6	Jelly Case iPhone 6
+TD-IP6P	Jelly Case iPhone 6 Plus
+TD-K10	Jelly Case LG K10
+TD-K7	Jelly Case LG K7
+TD-Z/R	Jelly Case LG Zone/Ray
+TD-MG3	Jelly Case Moto G3
+TD-MXS	Jelly Case Moto X Style
+TD-A52016	Jelly Case Samsung Galaxy A5 2016
+TD-A72016	Jelly Case Samsung Galaxy A7 2016
+TD-GP	Jelly Case Samsung Grand Prime
+TD-J5	Jelly Case Samsung Galaxy J5
+TD-J7	Jelly Case Samsung Galaxy J7
+TD-N5	Jelly Case Samsung Galaxy Note 5
+TD-S5	Jelly Case Samsung Galaxy S5
+TD-S6	Jelly Case Samsung Galaxy S6
+TD-S6E	Jelly Case Samsung Galaxy S6 Edge
+TD-S6EP	Jelly Case Samsung Galaxy S6 Edge Plus
+TD-S7	Jelly Case Samsung Galaxy S7
+TD-S7E	Jelly Case Samsung Galaxy S7 Edge
+TD-C4	Jelly Case Sony C4
+TD-C5	Jelly Case Sony C5
+TD-M4	Jelly Case Sony M4
+TD-Z5	Jelly Case Sony Z5
+IP4A	Case iPhone 4/4s Uso Rudo
+IP5A	Case iPhone 5/5s Uso Rudo
+IP6A	Case iPhone 6 Uso Rudo
+ip6pa	Case iPhone 6 Plus Uso Rudo
+n4a	Case Galaxy Note 4 Uso Rudo
+S3A	Case Galaxy S3 Uso Rudo
+S4A	Case Galaxy S4 Uso Rudo
+S5A	Case Galaxy S5 Uso Rudo
+RC-IP5	Rubber Case iPhone 5/5s
+RC-IP6	Rubber Case iPhone 6/6s
+RC-IP6P	Rubber Case iPhone 6 Plus
+RC-A5	Rubber Case Samsung Galaxy A5
+RC-GP	Rubber Case Samsung Grand Prime
+RC-N5	Rubber Case Samsung Galaxy Note 5
+RC-S5	Rubber Case Samsung Galaxy S5
+RC-S6	Rubber Case Samsung Galaxy S6
+RC-S6E	Rubber Case Samsung Galaxy S6 Edge
+RC-S6EP	Rubber Case Samsung Galaxy S6 Edge Plus
+RG-IP5	Rubber Case iPhone 5/5s
+RG-IP6	Rubber Case iPhone 6
+RG-A52016	Rubber Case Transparente Samsung Galaxy A5 2016
+RG-A72016	Rubber Case Transparente Samsung Galaxy A7 2016
+RG-GP	Rubber Gel
+RG-S7	Rubber Case Transparente Samsung Galaxy S7
+RG-S7E	Rubber Case Tansparente Samsung Galaxy S7 Edge
+C-ip5	Cartera Iphone 5 Slim
+C-ip6	Cartera iPhone 6 Slim
+C-GP	Cartera Grand Prime
+DP-IP5	Dual Pro iPhone 5/5s
+DP-IP6	Dual Pro iPhone 6/6s
+DP-IP6P	Dual Pro iPhone 6 Plus
+DP-GP	Dual Pro Samsung Grand Prime
+DP-J5	Dual Pro Samsung Galaxy J5
+DP-J7	Dual Pro Samsung Galaxy J7
+DP-N5	Dual Pro Samsung Galaxy Note 5
+DP-S6	Dual Pro Samsung Galaxy S6
+DP-S6E	Dual Pro Samsung Galaxy S6 Edge
+DP-S6EP	Dual Pro Samsung Galaxy S6 Edge Plus
+HG-IP5	Case Hibrido + Glitter iPhone 5/5s
+HG-IP6	Case Hibrido + Glitter iPhone 6/6s
+HG-IP6P	Case Hibrido + Glitter iPhone 6 Plus
+HG-G4	Case Hibrido + Glitter Sony M4 Aqua
+HG-A5	Case Hibrido + Glitter Galaxy A5
+HG-E5	Case Hibrido + Glitter Galaxy E5
+HG-GP	Case Hibrido + Glitter Samsung Grand Prime
+HG-J5	Case Hibrido + Glitter Galaxy J5
+HG-J7	Case Hibrido + Glitter Galaxy J7
+HG-N5	Case Hibrido + Glitter Galaxy Note 5
+HG-S6	Case Hibrido + Glitter Samsung S6
+HG-S6E	Case Hibrido + Glitter Samsung S6 Edge
+HG-S6EP	Case Hibrido + Glitter Samsung S6 Edge Plus
+HG-C5	Case Hibrido + Glitter Sony C5
+HG-M4A	Case Hibrido + Glitter Sony M4 Aqua
+HY-IP5	Case Hibrido claro iPhone 5/5s
+HY-IP6	Case Hibrido claro iPhone 6/6s
+HY-IP6P	Case Hibrido claro iPhone 6 Plus
+HY-G4	Hibrido G4
+HY-A5	Case Hibrido claro Galaxy A5
+HY-E5	Case Hibrido claro Galaxy E5
+HY-GP	Case Hibrido claro Samsung Grand Prime
+HY-J5	Case Hibrido claro Galaxy J5
+HY-J7	Case Hibrido claro Galaxy J7
+HY-N5	Case Hibrido claro Galaxy Note 5
+HY-S5	Hibrido Samsung Galaxy S5
+HY-S6	Case Hibrido claro Samsung S6
+HY-S6E	Case Hibrido claro Samsung S6 Edge
+HY-S6EP	Case Hibrido claro Samsung S6 Edge Plus
+HY-C4	Hibrido Sony C4
+HY-C5	Case Hibrido claro Sony C5
+HY-M4A	Case Hibrido claro Sony M4 Aqua
+HY-Z5	Hibrido Sony Z5
