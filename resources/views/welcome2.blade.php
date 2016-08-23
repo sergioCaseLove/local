@@ -78,6 +78,13 @@
         });
         //$.each()
     });
+
+    function isNumberKey(evt){
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
+            return false;
+        return true;
+    }
     /*
     var availableTags = [
       "ActionScript",
@@ -354,7 +361,7 @@
                                 <label> <font color="gray" face="verdana">Precio</font></label>
                             </td>
                             <td align="left" colspan="2" style="margin:50px">
-                                <input style="width:180px" type="number" value="0.0" id="precio" name="precio">
+                                <input style="width:180px" type="text" value="0.0" id="precio" name="precio">
                             </td>
                     </tr>
                     <tr>
@@ -362,7 +369,7 @@
                                 <label> <font color="gray" face="verdana">Precio 2</font></label>
                             </td>
                             <td align="left" colspan="2" style="margin:50px">
-                                <input style="width:180px" type="number" value="0.0" id="precio2" name="precio2">
+                                <input style="width:180px" type="text" value="0.0" id="precio2" name="precio2">
                             </td>
                     </tr>
                     <tr>
@@ -370,7 +377,7 @@
                                 <label> <font color="gray" face="verdana">Precio 3</font></label>
                             </td>
                             <td align="left" colspan="2" style="margin:50px">
-                                <input style="width:180px" type="number" value="0.0" id="precio3" name="precio3">
+                                <input style="width:180px" type="text" value="0.0" id="precio3" name="precio3">
                             </td>
                     </tr>
                     <tr>
@@ -378,7 +385,7 @@
                                 <label> <font color="gray" face="verdana">Precio 4</font></label>
                             </td>
                             <td align="left" colspan="2" style="margin:50px">
-                                <input style="width:180px" type="number" value="0.0" id="precio4" name="precio4">
+                                <input style="width:180px" type="text" value="0.0" id="precio4" name="precio4">
                             </td>
                     </tr>
                     <tr>
@@ -386,7 +393,7 @@
                                 <label> <font color="gray" face="verdana">Precio 5</font></label>
                             </td>
                             <td align="left" colspan="2" style="margin:50px">
-                                <input style="width:180px" type="number" value="0.0" id="precio5" name="precio5">
+                                <input style="width:180px" type="text" value="0.0" id="precio5" name="precio5">
                             </td>
                     </tr>
                     <tr>
@@ -394,7 +401,7 @@
                                 <label> <font color="gray" face="verdana">Ultimo Costo</font></label>
                             </td>
                             <td align="left" colspan="2" style="margin:50px">
-                                <input style="width:180px" type="number" value="0.0" id="ultimo_costo" name="ultimo_costo">
+                                <input style="width:180px" type="text" value="0.0" id="ultimo_costo" name="ultimo_costo">
                             </td>
                     </tr>
                             <!--

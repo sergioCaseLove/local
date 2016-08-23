@@ -72,6 +72,7 @@ class inicioController extends Controller
 
 	public function guardarCampo(Request $request)
 	{
+		set_time_limit(60*60);
 		$tipos = $request->input('tipos');
 		$cats = $request->input('cats');
 		$catArray = array();
@@ -140,7 +141,7 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'A-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'A-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Uso Rudo";
 								$producto->codigo_barras = 'A-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
@@ -152,6 +153,9 @@ class inicioController extends Controller
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -166,18 +170,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'C-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'C-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description =  $modelo[0]->descripcion . " Cartera";
 								$producto->codigo_barras = 'C-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "C";
 								$producto->familia = "Cartera";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -193,18 +200,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'DP-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'DP-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Dual Pro";
 								$producto->codigo_barras = 'DP-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "DP";
 								$producto->familia = "Dual Pro";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -220,18 +230,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'HG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'HG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Glitter";
 								$producto->codigo_barras = 'HG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "HG";
 								$producto->familia = "Glitter";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -247,18 +260,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'HY-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'HY-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Hibrido";
 								$producto->codigo_barras = 'HY-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "HY";
 								$producto->familia = "Hibrido";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -274,18 +290,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'RC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'RC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Rubber Case";
 								$producto->codigo_barras = 'RC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "RC";
 								$producto->familia = "Rubber Case";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -301,18 +320,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'RG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'RG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Rubber Gel";
 								$producto->codigo_barras = 'RG-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "RG";
 								$producto->familia = "Rubber Gel";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -328,18 +350,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'SC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'SC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Slim Case";
 								$producto->codigo_barras = 'SC-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "SC";
 								$producto->familia = "Slim Case";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -355,18 +380,21 @@ class inicioController extends Controller
 								$modelo = \App\Modelo::where('clave', $clave)->get();
 								$producto = new \App\ArticulosSait;
 
-								$producto->clave = 'TD-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
+								//$producto->clave = 'TD-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->description = $modelo[0]->descripcion . " Jelly Case";
 								$producto->codigo_barras = 'TD-' . $clave . '-' . $key . '-' . $ca['consecutivo'];
 								$producto->unidad = $unidad;
 								$producto->marca = $marca;
-								$producto->modelo = $modelo;
+								$producto->modelo = $modelo[0]->descripcion;
 								$producto->clave_familia = "TD";
 								$producto->familia = "Jelly Case";
 								$producto->impuesto1 = $impuesto1;
 								$producto->divisa = $divisa;
 								$producto->precio = $precio;
 								$producto->precio2 = $precio2;
+								$producto->precio3 = $precio3;
+								$producto->precio4 = $precio4;
+								$producto->precio5 = $precio5;
 								$producto->ultimo_costo = $ultimo_costo;
 								$producto->clave_disenio = $key;
 								$producto->save();
@@ -381,14 +409,17 @@ class inicioController extends Controller
 	}
 	public function descargaArchivo()
 	{
+		set_time_limit(60*60);
 		//esta aprte descarga el archivo con los datos, solo falta jalarlos de la base de datos para despues guardarlos
 		//preguntar sobre los diferentes precios para diferentes tipos de articulos
-		$result = \App\ArticulosSait::where('exportado', 0)->get();
-		if(!$result->isEmpty())
+		//si hay muchos articulos en la base la app manda error
+		//$result = \App\ArticulosSait::where('exportado', 0)->take(1000)->get();
+		//return \App\ArticulosSait::where('exportado', 0)->count();	
+		if(\App\ArticulosSait::where('exportado', 0)->count() > 0)
 		{
-			\Excel::create('export_sait', function($excel) use ($result) {
+			\Excel::create('export_sait', function($excel){
 
-		    	$excel->sheet('Articulos', function($sheet) use ($result) {
+		    	$excel->sheet('Articulos', function($sheet){
 					$cont = 1;
 
 
@@ -415,32 +446,37 @@ class inicioController extends Controller
 					$sheet->row($cont, $rowArray);
 					$cont++;
 
-					foreach($result as $row)
+					while(\App\ArticulosSait::where('exportado', 0)->count() > 0)
 					{
+						$result = \App\ArticulosSait::where('exportado', 0)->take(1000)->get();
+						foreach($result as $row)
+						{
 
-						$rowArray = array(
-							$row->clave,
-							$row->clave,
-							$row->description,
-							$row->clave_familia,
-							$row->familia,
-							$row->impuesto1,
-							$row->numero_proveedor,
-							$row->numero_proveedor2,
-							$row->numero_proveedor3,
-							$row->numero_proveedor4,
-							$row->divisa,
-							0,
-							$row->precio,
-							$row->precio2,
-							$row->precio3,
-							$row->precio4,
-							$row->precio5
-						);
-						$row->exportado = 1;
-						$sheet->row($cont, $rowArray);
-						$cont++;
-						\App\ArticulosSait::where('clave', $row->clave)->update(['exportado' => 1]);
+							$rowArray = array(
+								$row->codigo_barras,
+								$row->codigo_barras,
+								$row->description,
+								$row->clave_familia,
+								$row->familia,
+								$row->impuesto1,
+								$row->numero_proveedor,
+								$row->numero_proveedor2,
+								$row->numero_proveedor3,
+								$row->numero_proveedor4,
+								$row->divisa,
+								$row->precio * ($row->impuesto1 * 0.01) + $row->precio,
+								$row->precio,
+								$row->precio2,
+								$row->precio3,
+								$row->precio4,
+								$row->precio5
+							);
+							$row->exportado = 1;
+							$sheet->row($cont, $rowArray);
+							$cont++;
+							\App\ArticulosSait::where('codigo_barras', $row->codigo_barras)->update(['exportado' => 1]);
+						}
+						
 					}
 					
 				});
