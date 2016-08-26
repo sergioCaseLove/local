@@ -19,6 +19,12 @@ use Illuminate\Support\Facades\Response;
 class inicioController extends Controller
 {
 	private $tipos;
+	public function preView()
+	{
+		$prod = \App\ArticulosSait::get();
+		//return $prod;
+		return view('preview', ['prods' => $prod]);
+	}
 	public function inicio()
 	{
 		//$pedido = \App\prueba::all();
@@ -415,6 +421,22 @@ class inicioController extends Controller
 		//si hay muchos articulos en la base la app manda error
 		//$result = \App\ArticulosSait::where('exportado', 0)->take(1000)->get();
 		//return \App\ArticulosSait::where('exportado', 0)->count();	
+
+
+
+		/*
+			para exportar es mas o menos una hora por cada 10000 elementos
+			checar exportando a archivos de texto a ver si hay alguna diferencia
+			si no ver si desde el cpanel piedo exportar directo para excel
+
+			si se puede igual se va a tardar un chingo :v
+
+			si esto llegara a ser poco viable checar con otro lenguaje de programacion
+
+			mandar correo con las cosas que se hicieron a gera :v
+		*/
+
+
 		if(\App\ArticulosSait::where('exportado', 0)->count() > 0)
 		{
 			\Excel::create('export_sait', function($excel){
@@ -476,7 +498,7 @@ class inicioController extends Controller
 							$cont++;
 							\App\ArticulosSait::where('codigo_barras', $row->codigo_barras)->update(['exportado' => 1]);
 						}
-						
+
 					}
 					
 				});

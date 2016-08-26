@@ -16,3 +16,5 @@ Route::get('modelos', 'inicioController@getArtic');
 Route::get('verPedido', 'inicioController@verPedido');
 Route::get('descarga', 'inicioController@descargaArchivo');
 Route::get('guardar', 'inicioController@guardarCampo');
+
+Route::get('preview', 'inicioController@preView');
