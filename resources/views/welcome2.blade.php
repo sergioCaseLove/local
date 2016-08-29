@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico">
         <title>Laravel</title>
 
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" style="width:180px" type="text/css">
@@ -205,7 +206,7 @@
                                 <input style="width:180px" type="text" id="unidad" name="unidad">
                             </td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                             <td align="left" style="margin:50px">
                                 <label> <font color="gray" face="verdana">Marca</font></label>
                             </td>
@@ -220,7 +221,7 @@
                             <td align="left" colspan="2" style="margin:50px">
                                 <input style="width:180px" type="text" id="modelo" name="modelo">
                             </td>
-                    </tr>
+                    </tr>-->
                      <!--<tr>    
                             este campo probablemente va a tener un combobox con las opciones existentes 
                             <td align="left" style="margin:50px">
@@ -315,7 +316,7 @@
                             <td align="left" style="margin:50px">
                                 <input style="width:180px" type="text" id="impuesto2">
                             </td>
-                    </tr>-->
+                    </tr>
                     <tr>
                             <td align="left" style="margin:50px">
                                 <label> <font color="gray" face="verdana">Numero de proveedor</font></label>
@@ -347,7 +348,7 @@
                             <td align="left" colspan="2" style="margin:50px">
                                 <input style="width:180px" type="text" id="numero_proveedor4" name="numero_proveedor4">
                             </td>
-                    </tr>
+                    </tr>-->
                     <tr>
                             <td align="left" style="margin:50px">
                                 <label> <font color="gray" face="verdana">Divisa</font></label>
@@ -372,6 +373,7 @@
                                 <input style="width:180px" type="text" value="0.0" id="precio2" name="precio2">
                             </td>
                     </tr>
+                    <!--
                     <tr>
                             <td align="left" style="margin:50px">
                                 <label> <font color="gray" face="verdana">Precio 3</font></label>
@@ -403,7 +405,7 @@
                             <td align="left" colspan="2" style="margin:50px">
                                 <input style="width:180px" type="text" value="0.0" id="ultimo_costo" name="ultimo_costo">
                             </td>
-                    </tr>
+                    </tr>-->
                             <!--
                     <tr> campo de si o no en la base se maneja con los valores del excel 
                             <td align="left" style="margin:50px">

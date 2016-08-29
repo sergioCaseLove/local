@@ -21,8 +21,10 @@ class inicioController extends Controller
 	private $tipos;
 	public function preView()
 	{
-		$prod = \App\ArticulosSait::get();
+		//\App\ArticulosSait::where('description', 'Galaxy A3 Slim Case')->update(['unidad' => 'PZA']);
+		$prod = \App\ArticulosSait::where('exportado', 0)->get();
 		//return $prod;
+
 		return view('preview', ['prods' => $prod]);
 	}
 	public function inicio()
@@ -445,28 +447,20 @@ class inicioController extends Controller
 					$cont = 1;
 
 
-
+/*
 					$rowArray = array(
 							"Clave de Articulo", 
 							"Codigo de Barras", 
 							"Descripcion", 
-							"Clave de Familia", 
-							"Familia", 
+							"Clave de Familia"
 							"impuesto1",
-							"numprov",
-							"numprov1",
-							"numprov2",
-							"numprov3",
 							"divisa",
 							"preciopub", 
 							"precio1",
-							"precio2",
-							"precio3",
-							"precio4",
-							"precio5"
+							"precio2"
 					);
 					$sheet->row($cont, $rowArray);
-					$cont++;
+					$cont++;*/
 
 					while(\App\ArticulosSait::where('exportado', 0)->count() > 0)
 					{
@@ -479,19 +473,11 @@ class inicioController extends Controller
 								$row->codigo_barras,
 								$row->description,
 								$row->clave_familia,
-								$row->familia,
 								$row->impuesto1,
-								$row->numero_proveedor,
-								$row->numero_proveedor2,
-								$row->numero_proveedor3,
-								$row->numero_proveedor4,
 								$row->divisa,
 								$row->precio * ($row->impuesto1 * 0.01) + $row->precio,
 								$row->precio,
-								$row->precio2,
-								$row->precio3,
-								$row->precio4,
-								$row->precio5
+								$row->precio2
 							);
 							$row->exportado = 1;
 							$sheet->row($cont, $rowArray);

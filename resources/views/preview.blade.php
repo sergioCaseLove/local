@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico">
+        <title>Preview</title>
 
         <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" style="width:180px" type="text/css">
         <link rel="stylesheet" href="js/jquery-ui-1.12.0.custom/jquery-ui.css">
-        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
         <script src="js/bindWithDelay/bindWithDelay.js"></script>
         <script src="js/FilterTable/jquery.filtertable.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
           <script>
-
+/*
     $(document).ready(function() {
         // apply filterTable to all tables on this page
-        $('table').filterTable({filterExpression: 'filterTableFindAll'});
-    });
+        //$('table').filterTable({filterExpression: 'filterTableFindAll'});
+        $('table').filterTable({ // apply filterTable to all tables on this page
+            inputSelector: '#busqueda'// use the existing input instead of creating a new one
+        });
+    });*/
   </script>
         <style>
             html, body {
@@ -51,8 +58,9 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
     </head>
     <body>
         <div class="container" style="position:absolute">
-            <div class="content">
-                <table border="1px">
+            <div class="content" style="margin:50px;">
+            <label>Buscar: </label><input type="search" style="margin:10px;" name="busqueda" id="filterTable-input" data-type="search">
+                <table border="1px" data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="myTable" data-filter="true" data-input="#filterTable-input">
                         <tr>
                             <th style="padding:10px">
                                 <font color="gray" face="verdana">Codigo de Barras</font>
@@ -63,9 +71,9 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
                             <th style="padding:10px">
                                 <font color="gray" face="verdana">Unidad</font>
                             </th>
-                            <th style="padding:10px">
+                            <!--<th style="padding:10px">
                                 <font color="gray" face="verdana">Marca</font>
-                            </th>
+                            </th>-->
                             <th style="padding:10px">
                                 <font color="gray" face="verdana">Modelo</font>
                             </th>
@@ -99,9 +107,9 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
                             <td style="padding:10px">
                                 <font color="gray" face="verdana">{{$prod->unidad}}</font>
                             </td>
-                            <td style="padding:10px">
+                            <!--<td style="padding:10px">
                                 <font color="gray" face="verdana">{{$prod->marca}}</font>
-                            </td>
+                            </td>-->
                             <td style="padding:10px">
                                 <font color="gray" face="verdana">{{$prod->modelo}}</font>
                             </td>
