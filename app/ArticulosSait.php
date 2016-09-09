@@ -8,4 +8,5 @@ class ArticulosSait extends Model
 {
     //
     protected $table = 'sait_articulos';
+    //protected $dateFormat = 'D j F';
 }

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\prueba;
@@ -21,10 +20,13 @@ class inicioController extends Controller
 	private $tipos;
 	public function preView()
 	{
+		//$datetime = DateTime::createFromFormat('YmdHi', mktime());
+		//return $datetime->format('D');
+		//return time();
 		//\App\ArticulosSait::where('description', 'Galaxy A3 Slim Case')->update(['unidad' => 'PZA']);
 		$prod = \App\ArticulosSait::where('exportado', 0)->get();
 		//return $prod;
-
+		
 		return view('preview', ['prods' => $prod]);
 	}
 	public function inicio()
@@ -414,6 +416,23 @@ class inicioController extends Controller
 
 			}
 		}
+	}
+	public function sendMail()
+	{
+		set_time_limit(60*60);
+		    $data = array(
+		        'name' => "Learning Laravel",
+		    );
+
+		    \Mail::send('emails.welcome', $data, function ($message) {
+
+		        $message->from('ordena@lovecaselove.com', 'Learning Laravel');
+
+		        $message->to('sergio@lovecaselove.com')->subject('Learning Laravel test email');
+
+		    });
+
+		    return "Your email has been sent successfully";
 	}
 	public function descargaArchivo()
 	{
