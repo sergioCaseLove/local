@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
@@ -18,16 +17,128 @@ use Illuminate\Support\Facades\Response;
 class inicioController extends Controller
 {
 	private $tipos;
+	public function muestraImagen(Request $request)
+	{
+		$file = $request->input('val');
+		if(!\File::exists($file))
+		{
+			return ':v';
+		}
+		else{
+			$img = \Image::make($file);
+			$type = explode('.', $file);
+    		$img->encode($type[1]);
+    		$img = 'data:image/' . $type[1] . ';base64,' . base64_encode($img);
+			//return $img;
+			return view('muestraImagen', ['img' => $img]);
+			//return $img;
+			//return (string)\File::exists($file);
+		}
+	}
+	public function colleccion(Request $request)
+	{
+		ini_set('memory_limit', '-1');
+		$files = \File::allFiles('images\\' . $request->input('val'));
+		/*$cont = 0;
+		$filesArray = array();
+		foreach ($files as $key => $file)
+		{
+			$filesArray[$cont++] = (string) $file;
+		}
+		return $filesArray;*/
+		$cont = 0;
+		foreach ($files as $key => $file)
+		{
+			//return $file;
+    		$img = \Image::make((string)$file);
+    		//$img = $img->resize($img->height() * 0.5, $img->width() * 0.5);
+    		//$tmpFile = explode('-', $file);
+    		$type = explode('.', $file);
+    		$img->encode($type[1]);
+			$base64[$cont]['img'] = 'data:image/' . $type[1] . ';base64,' . base64_encode($img);
+			$base64[$cont]['val'] = $file;
+    		$cont++;
+		    //$dirArray[$key] = (string)$file;
+		}
+		/*$cmX1 = 7.7973;
+    	$cmY1 = 15.4691;
+
+    	$cmX = 5.9796;
+    	$cmY = 11.238;
+
+    	$pixelX = $cmX * 37.795275591;
+    	$pixelY = $cmY * 37.795275591;
+    	$pixelX1 = $cmX1 * 37.795275591;
+    	$pixelY1 = $cmY1 * 37.795275591;
+
+    	$img = \Image::make('images/capas/GK-3.jpg')->resize($pixelX1, $pixelY1);
+    	$img2 = \Image::make('images/capas/GK-3.jpg')->resize($pixelX, $pixelY);
+    	//return $img->response('jpg');
+    	$img->encode('jpg');
+    	$img2->encode('jpg');
+    	$type = 'jpg';
+		$base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+		$base642 = 'data:image/' . $type . ';base64,' . base64_encode($img2);*/
+    	return view('coleccion', ['imgs' => $base64, 'coleccion' => $request->input('val')]);
+	}
 	public function preView()
 	{
+		    //$imagick = new \Imagick('images/back-bladel2plus.png');
+		    //echo Response::make(readfile('images/back-bladel2plus.png', 200))->header('Content-Type', 'image/png');
+		
+		/*
+			
+    		return $img->response('jpg');
+		*/
+    	//$img = \Image::make('images/wea_123.png');
+
+		$files = \File::allFiles('images/portadas');
+		$dirArray = array();
+    	$type = 'png';
+		$cont = 0;
+		foreach ($files as $key => $file)
+		{
+    		$img = \Image::make((string)$file);
+    		$tmpFile = explode('-', $file);
+    		$tmpFile = explode('.', $tmpFile[1]);
+    		$img->encode('png');
+			$base64[$cont]['img'] = 'data:image/' . $type . ';base64,' . base64_encode($img);
+			$base64[$cont]['val'] = $tmpFile[0];
+    		$cont++;
+		    //$dirArray[$key] = (string)$file;
+		}
+		return view('preview', ['imgs' => $base64]);
+    	$cmX = 7.7973;
+    	$cmY = 15.4691;
+
+    	//$cmX = 5.9796;
+    	//$cmY = 11.238;
+
+    	$pixelX = $cmX * 37.795275591;
+    	$pixelY = $cmY * 37.795275591;
+
+    	$img = \Image::make('images/wea_123.png')->resize($pixelX, $pixelY);
+    	$img2 = \Image::make('images/template-bladel2plus.png')->resize($pixelX, $pixelY);
+    	//return $img->response('jpg');
+    	$img->encode('png');
+    	$img2->encode('png');
+    	$type = 'png';
+		$base64 = 'data:image/' . $type . ';base64,' . base64_encode($img);
+		$base642 = 'data:image/' . $type . ';base64,' . base64_encode($img2);
+    	return view('preview', ['img' => $base64, 'img2' => $base642]);
+		//$response = Response::make(readfile("images/back-bladel2plus.png"));
+		//$response->header('Content-Type', 'image/png');
+		//return $response;
 		//$datetime = DateTime::createFromFormat('YmdHi', mktime());
 		//return $datetime->format('D');
 		//return time();
 		//\App\ArticulosSait::where('description', 'Galaxy A3 Slim Case')->update(['unidad' => 'PZA']);
-		$prod = \App\ArticulosSait::where('exportado', 0)->get();
+		//$prod = \App\ArticulosSait::where('exportado', 0)->get();
 		//return $prod;
-		
-		return view('preview', ['prods' => $prod]);
+		//$manager = new ImageManager(array('driver' => 'imagick'));
+		//$image = $manager->make('images/back-bladel2plus.png')->resize(300, 200);
+
+		//return $image;
 	}
 	public function inicio()
 	{
