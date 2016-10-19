@@ -17,23 +17,86 @@ use Illuminate\Support\Facades\Response;
 class inicioController extends Controller
 {
 	private $tipos;
+	public function codigoReferido()
+	{
+		$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+		$cant = 0;
+		$usuario = new \App\Usuario;
+		do
+		{
+			$codigo = $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)];
+			$cant = \App\Usuario::where('codigo', $codigo)->count();
+		}
+		while($cant > 0);
+		$usuario->codigoReferido = $codigo;
+		$usuario->save();
+		return $codigo;
+		
+	}
+	public function codigoTodos()
+	{
+		//dd(\DB::getQueryLog());
+		//\DB::enableQueryLog();
+		//return 1;
+		$arr = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+		$usuarios = \App\Usuario::get();
+		//return $usuarios;
+		$usrd = array();
+		foreach($usuarios as $usuario)
+		{
+			if($usuario->codigoReferido == null)
+			{
+				$codigo = $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)] . '' . $arr[rand(0, 34)];
+				$usuario->codigoReferido = $codigo;
+				$usuario->save();
+				//$usrd = \App\Usuario::where('id', $usuario->idUsuario)->update(['codigoReferido', $codigo]);
+			}
+		}
+		return $usuarios;
+	}
 	public function muestraImagen(Request $request)
 	{
+		//return view('muestraImagen');
 		$file = $request->input('val');
-		if(!\File::exists($file))
+		$file = str_replace('\\', '/', $file);
+		
+		$cmX = 7.7973;
+    	$cmY = 15.4691;
+
+    	$pixelX = $cmX * 37.795275591;
+    	$pixelY = $cmY * 37.795275591;
+
+    	$tamaño = array('ancho' => $pixelX, 'alto' => $pixelY);
+
+		return view('muestraImagen', ['img' => $file,'tamaño' => $tamaño]);
+		/*if(!\File::exists($file))
 		{
 			return ':v';
 		}
 		else{
-			$img = \Image::make($file);
+			//$img = \Image::make($file);
+    		$cmX1 = 7.7973;
+	    	$cmY1 = 15.4691;
+
+	    	$cmX = 5.9796;
+	    	$cmY = 11.238;
+
+	    	$pixelX = $cmX * 37.795275591;
+	    	$pixelY = $cmY * 37.795275591;
+	    	$pixelX1 = $cmX1 * 37.795275591;
+	    	$pixelY1 = $cmY1 * 37.795275591;
+
+    		$img = \Image::make($file)->resize($pixelX1, $pixelY1);
 			$type = explode('.', $file);
     		$img->encode($type[1]);
+
     		$img = 'data:image/' . $type[1] . ';base64,' . base64_encode($img);
 			//return $img;
+			//return '<img src="' . $img . '"/>';
 			return view('muestraImagen', ['img' => $img]);
 			//return $img;
 			//return (string)\File::exists($file);
-		}
+		}*/
 	}
 	public function colleccion(Request $request)
 	{

@@ -21,4 +21,6 @@ Route::get('preview', 'inicioController@preView');
 Route::get('nota', function(){  return view('nota');});
 Route::get('coleccion', 'inicioController@colleccion');
 Route::get('muestraImagen', 'inicioController@muestraImagen');
+Route::get('creaCodigo', 'inicioController@codigoReferido');
+Route::get('codigoTodos', 'inicioController@codigoTodos');
 //Route::get('imagen', 'inicioController@muestraImagen');
