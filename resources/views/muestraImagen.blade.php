@@ -15,18 +15,19 @@
 
 
 
-        function reDrawCanvasTemplate(x, y, ancho, alto){
+
+
+        function reDrawCanvasTemplate(x, y, ancho, alto, vendor, model){
             $myCanvas = $("#myCanvasBack");
             $myCanvas.removeLayers();
             $myCanvas.addLayer({
                 type:'image',
-                source: '/images/cases/template-motog3.png',
+                source: '/images/CasesSlim/' + vendor + '/' + model + '/' + model + '-lines.png',
                 //draggable: true,
                 fillStyle: '#fff',
                 strokeStyle: '#c33',
                 strokeWidth: 2,
-                x: 140, y: 200,
-                scale:0.7
+                x: 250, y: 300
             }).drawLayers();
 
             $myCanvas.drawImage({
@@ -51,21 +52,20 @@
             });
         }
 
-        function reDrawCanvasPreView(x, y, ancho, alto)
+        function reDrawCanvasPreView(x, y, ancho, alto, vendor, model)
         {
             $myCanvas = $("#myCanvasFront");
             $myCanvas.removeLayers()
             //esta funcion lo que hace es redibujar el contenido del canvas con la imagen en la posicion en la que se acomodo pero no funciona :'v
             $myCanvas.addLayer({
                 type:'image',
-                source: '/images/cases/back-motog3.png',
+                source: '/images/CasesSlim/' + vendor + '/' + model + '/' + model + '-back.png',
                 //draggable: true,
                 fillStyle: '#fff',
                 strokeStyle: '#c33',
                 strokeWidth: 2,
-                x: 140, y: 200,
-                scale:0.7
-            }).drawLayers();
+                x: 250, y: 300,
+            }).drawLayers()
 
             $myCanvas.drawImage({
                 layer:true,
@@ -83,7 +83,7 @@
 
             $myCanvas.drawImage({
                 layer:true,
-                source: '/images/cases/cover-motog3.png',
+                source: '/images/CasesSlim/' + vendor + '/' + model + '/' + model + '-cover.png',
                 //draggable: true,
                 fillStyle: '#fff',
                 name:'cover',
@@ -91,21 +91,74 @@
                 strokeStyle: '#c33',
                 strokeWidth: 2,
                 bringToFront:true,
-                x: 140, y: 200,
-                scale:0.7,
+                x: 250, y: 300,
             });
+            var imgEdit = document.createElement("img");
+            imgEdit.src = document.getElementById("myCanvasFront").toDataURL();
+            //console.log(imgEdit);
+            $("#imgEdit").empty();
+            $("#imgEdit").append(imgEdit);
 
             $("#myCanvasBack").hide();
             $("#myCanvasFront").show();
+        }
+
+        function getVendor()
+        {
+            $.get('getVendors',
+            {
+            },
+            function(data, status)
+            {
+                $("#selector").empty();
+                $("#selector").append("<option disabled selected></option>");
+                $.each(data, function(inddex, obj){
+                    $("#selector").append("<option value=" + obj + ">" + obj + "</option>");
+                });
+            });
+        }
+
+        function getModels(vendor)
+        {
+            $.get('getModels',
+            {
+                vendor: vendor
+            },
+            function(data, status)
+            {
+                $("#selector").empty();
+                $("#selector").append("<option disabled selected></option>");
+                $.each(data, function(inddex, obj){
+                    console.log(obj);
+                    $("#selector").append("<option value=" + obj.image + ">" + obj.show + "</option>");
+                });
+            });
         }
 
         $(document).ready(function(){
             //inicializacion de las variables
             ancho = 100;
             alto = 100;
-            x = 150;
-            y = 150;
-            reDrawCanvasTemplate(x, y, ancho, alto);
+            x = 250;
+            y = 300;
+            vendor = 'Samsung';
+            modelImage = 'Galaxy-A5';
+            model = 'Galaxy-A5';
+            reDrawCanvasTemplate(x, y, ancho, alto, vendor, model);
+            reDrawCanvasPreView(x, y, ancho, alto, vendor, model);
+            getVendor();
+            Dropzone.autoDiscover = false;
+            $("#dragArea").dropzone({url:'#'});
+
+
+            $("#dragArea").on('success', function(file, asd){
+                alert('1');
+            });
+
+
+            $("#dragArea").on('drop', function(file){
+                alert(':v');
+            });
             /*$("#myCanvasFront").click(function () {
                 $(this).attr("style", "position: absolute; width: 1124px; height: 494px; left: 0px; top: 0px; -webkit-user-select: none; cursor: default;display:none");
                 $("#myCanvasBack").attr("style", "position: absolute; width: 1124px; height: 494px; left: 0px; top: 0px; -webkit-user-select: none; cursor: default;display:inblock");
@@ -116,13 +169,41 @@
                 $("#myCanvasFront").attr("style", "position: absolute; width: 1124px; height: 494px; left: 0px; top: 0px; -webkit-user-select: none; cursor: default;display:inblock");
                 console.log("back");
             });*/
-            $("#myCanvasFront").click(function(){
+            $("#myCanvasFront").dblclick(function(){
                 $("#myCanvasBack").show();
                 $("#myCanvasFront").hide();
             });
             $("#myCanvasBack").dblclick(function(){
-                reDrawCanvasPreView(x, y, ancho, alto);
+                reDrawCanvasPreView(x, y, ancho, alto, vendor, model);
             });
+            $("#myCanvasBack").blur(function(){
+                reDrawCanvasPreView(x, y, ancho, alto, vendor, model);
+            });
+
+
+
+            $("#selector").change(function(){
+                if($(this).attr('actual') == 'vendors'){
+                    vendor = $(this).val();
+                    //console.log($(this).val());
+                    getModels($(this).val()); 
+                    $(this).attr('actual', 'models');
+                }
+                else{
+                    model = $(this).val();
+                    console.log(model);
+                    console.log($('#selector option[selected]').text());
+                    reDrawCanvasTemplate(x, y, ancho, alto, vendor, model);
+                    reDrawCanvasPreView(x, y, ancho, alto, vendor, model);
+                }
+            });
+
+
+
+            /*$("#myCanvasBack").mousemove(function(){
+                reDrawCanvasPreView(x, y, ancho, alto);
+
+            });*/
                         /*$('#myCanvas').css('background-color', 'rgba(237, 237, 237, 1)');*/
             /*$("#myCanvasBack").mousedown(function(){
                 //esta linea borra la cubierta del case para poder manipular la imagen 
@@ -142,7 +223,7 @@
                 x = imagen.x;
                 y = imagen.y;
                 console.log("x: " + x + " y: " + y + " ancho: " + ancho + " alto: " + alto);
-                reDrawCanvasTemplate(x, y, ancho, alto);
+                reDrawCanvasTemplate(x, y, ancho, alto, vendor, model, modelImage);
             });
             var $myCanvas = $('#myCanvasBack');
             var $myCanvasFront = $('#myCanvasFront');
@@ -291,7 +372,11 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
 </style> <!-- or put the styling in your stylesheet -->
     </head>
     <body>
-    <canvas id="myCanvasBack" class="upper-canvas " width="286px" height="450px" style="position: absolute;  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;background-color: gray"></canvas>
-    <canvas id="myCanvasFront" class="upper-canvas " width="286px" height="450px" style="position: absolute;  left: 0px; top: 0px; -webkit-user-select: none; cursor: default; display:none;"></canvas>
+    <select id="selector" actual="vendors">
+    </select>
+    <div style="margin-top:12px;" id="dragArea">
+        <canvas id="myCanvasBack" class="upper-canvas " width="500px" height="600px" style="  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;background-color: gray" display:none;></canvas>
+        <canvas id="myCanvasFront" class="upper-canvas " width="500px" height="600px" style="  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;"></canvas>
+    </div>
     </body>
 </html>
