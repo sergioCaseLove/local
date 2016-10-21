@@ -26,4 +26,7 @@ Route::get('codigoTodos', 'inicioController@codigoTodos');
 Route::get('getVendors', 'EditorController@getVendors');
 Route::get('getModels', 'EditorController@getModels');
 Route::get('getModelImages', 'EditorController@getModelImages');
+Route::get('muestraImagenDiv', function(){
+	return view('muestraImagenDiv');
+});
 //Route::get('imagen', 'inicioController@muestraImagen');

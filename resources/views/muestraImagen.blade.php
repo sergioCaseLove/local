@@ -13,8 +13,44 @@
         <script type="text/javascript" src="js/dropzone.js"></script>
         <script>
 
+        imgGlobal = 0;
 
 
+        function reDrawCanvasTemplate2(x, y, ancho, alto, vendor, model, imagen){
+            console.log(imagen);
+            $myCanvas = $("#myCanvasBack");
+            $myCanvas.removeLayers();
+            $myCanvas.addLayer({
+                type:'image',
+                source: '/images/CasesSlim/' + vendor + '/' + model + '/' + model + '-lines.png',
+                //draggable: true,
+                fillStyle: '#fff',
+                strokeStyle: '#c33',
+                strokeWidth: 2,
+                x: 250, y: 300
+            }).drawLayers();
+
+            $myCanvas.drawImage({
+                layer:true,
+                type:'image',
+                name:'imagen',
+                source: imagen,
+                draggable: true,
+                bringToFront: true,
+                fillStyle: '#fff',
+                strokeStyle: '#c33',
+                strokeWidth: 2,
+                x: x, y: y,
+                width: ancho, height: alto,
+                handle: {
+                    type: 'arc',
+                    fillStyle: '#fff',
+                    strokeStyle: '#c33',
+                    strokeWidth: 2,
+                    radius: 10
+                }
+            });
+        }
 
 
         function reDrawCanvasTemplate(x, y, ancho, alto, vendor, model){
@@ -34,7 +70,7 @@
                 layer:true,
                 type:'image',
                 name:'imagen',
-                source: '{{$img}}',
+                source: imgGlobal,
                 draggable: true,
                 bringToFront: true,
                 fillStyle: '#fff',
@@ -71,7 +107,7 @@
                 layer:true,
                 type:'image',
                 name:'imagen',
-                source: '{{$img}}',
+                source: imgGlobal,
                 draggable: true,
                 bringToFront: true,
                 fillStyle: '#fff',
@@ -135,6 +171,27 @@
             });
         }
 
+
+        function readURL(input, x, y, ancho, alto, vendor, model) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    imagen = e.target.result;
+                    //console.log(imagen);
+                    img = $("#myCanvasFront").getLayer('imagen');
+                    img.source = imagen;
+                    imgGlobal = imagen;
+                    reDrawCanvasPreView(x, y, ancho, alto, vendor, model)
+                    //console.log(e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
         $(document).ready(function(){
             //inicializacion de las variables
             ancho = 100;
@@ -144,21 +201,11 @@
             vendor = 'Samsung';
             modelImage = 'Galaxy-A5';
             model = 'Galaxy-A5';
+            imagen = 0;
             reDrawCanvasTemplate(x, y, ancho, alto, vendor, model);
             reDrawCanvasPreView(x, y, ancho, alto, vendor, model);
             getVendor();
             Dropzone.autoDiscover = false;
-            $("#dragArea").dropzone({url:'#'});
-
-
-            $("#dragArea").on('success', function(file, asd){
-                alert('1');
-            });
-
-
-            $("#dragArea").on('drop', function(file){
-                alert(':v');
-            });
             /*$("#myCanvasFront").click(function () {
                 $(this).attr("style", "position: absolute; width: 1124px; height: 494px; left: 0px; top: 0px; -webkit-user-select: none; cursor: default;display:none");
                 $("#myCanvasBack").attr("style", "position: absolute; width: 1124px; height: 494px; left: 0px; top: 0px; -webkit-user-select: none; cursor: default;display:inblock");
@@ -170,6 +217,7 @@
                 console.log("back");
             });*/
             $("#myCanvasFront").dblclick(function(){
+                reDrawCanvasTemplate(x, y, ancho, alto, vendor, model);
                 $("#myCanvasBack").show();
                 $("#myCanvasFront").hide();
             });
@@ -178,6 +226,20 @@
             });
             $("#myCanvasBack").blur(function(){
                 reDrawCanvasPreView(x, y, ancho, alto, vendor, model);
+            });
+
+
+
+            $("#imagenes").change(function(){
+                //subir imagenes y desplegar un preview para despues poder seleccionarlas
+                //la idea es solo dejar usar una pero igual hacer que se pueda con multiples.
+                //$.each($("#imagenes"))
+
+                imagen = readURL(this, x, y, ancho, alto, vendor, model);
+                //console.log(imagen);
+                //var files = $(this)[0].files[0].name;
+                //alert(files);
+
             });
 
 
@@ -372,11 +434,16 @@ td.alt { background-color: #ffc; background-color: rgba(255, 255, 0, 0.2); }
 </style> <!-- or put the styling in your stylesheet -->
     </head>
     <body>
-    <select id="selector" actual="vendors">
-    </select>
-    <div style="margin-top:12px;" id="dragArea">
-        <canvas id="myCanvasBack" class="upper-canvas " width="500px" height="600px" style="  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;background-color: gray" display:none;></canvas>
-        <canvas id="myCanvasFront" class="upper-canvas " width="500px" height="600px" style="  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;"></canvas>
-    </div>
+        <select id="selector" actual="vendors">
+        </select>
+        <div style="margin-top:12px;" id="dragArea">
+            <div style="position: absolute;">
+                <canvas id="myCanvasBack" class="upper-canvas " width="500px" height="600px" style="  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;background-color: gray" display:none;></canvas>
+                <canvas id="myCanvasFront" class="upper-canvas " width="500px" height="600px" style="  left: 0px; top: 0px; -webkit-user-select: none; cursor: default;"></canvas>
+            </div>
+            <div style="background-color: blue;position:absolute;">
+                <input type="file" multiple="multiple" id="imagenes" name="imagenes[]">
+            </div>
+        </div>
     </body>
 </html>
